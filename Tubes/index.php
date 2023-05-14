@@ -9,7 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Etheirys | Unofficial Final Fantasy XIV Forums and news</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
-  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Sanskrit&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet" />
 </head>
@@ -37,7 +37,7 @@
               <div class="tombol-login bg-black bg-gradient p-1">
                 <div class="p-3 fs-5">
                   <span>
-                    <a href="Register.php">SIGN UP</a>
+                    <a href="LogIn.php">SIGN UP</a>
                   </span>
                 </div>
               </div>
@@ -45,7 +45,7 @@
           </div>
         </div>
       </div>
-      <nav class="bg-dark navbar-sm">
+      <nav class="bg-dark bg-gradient navbar-sm">
         <div class="nav_list">
           <ul>
             <li><a href="#home">HOME</a></li>
@@ -84,7 +84,7 @@
         <div class="card text-bg-dark">
           <img src="./img/-0g_F2CUNytxUB-1T7p0eK1YaI.jpg" class="card-img" alt="FinalFantasyXIV" />
           <div class="card-img-overlay">
-            <h1 class="card-title ">Final Fantasy XIV</h1>
+            <h1 class="card-title">Final Fantasy XIV</h1>
             <p class="card-text">
               Did you know that the critically acclaimed MMORPG Final Fantasy
               XIV has a free trial, and includes the entirety of A Realm
@@ -100,54 +100,96 @@
       <!-- Section News -->
       <section id="news" class="card bg-dark text-white">
         <h1>NEWS</h1>
-        <hr>
+        <hr />
         <div class="bg-dark text-white">
           <div class="card-body">
-            <h2 class="card-title text-danger">Patch 6.4─The Dark Throne Special Site Update</h2>
-            <img src="./img/173a2048d61c0d2fee9eb614f3c2baf034771837.png" alt="">
-            <br>
-            <p class="card-text">The Patch 6.4 special site has been updated with details on upcoming content including the main scenario; the new raid dungeon, Pandæmonium: Anabaseios; the new dungeon, the Aetherfont; the Unreal trial, Containment Bay Z1T9; and new additions to Duty Support.
-
-              Be sure to visit regularly as we’ll keep you updated on the latest information about the patch until its release.</p>
+            <h2 class="card-title text-danger">
+              Patch 6.4─The Dark Throne Special Site Update
+            </h2>
+            <img src="./img/173a2048d61c0d2fee9eb614f3c2baf034771837.png" alt="" />
+            <br />
+            <p class="card-text">
+              The Patch 6.4 special site has been updated with details on
+              upcoming content including the main scenario; the new raid
+              dungeon, Pandæmonium: Anabaseios; the new dungeon, the
+              Aetherfont; the Unreal trial, Containment Bay Z1T9; and new
+              additions to Duty Support. Be sure to visit regularly as we’ll
+              keep you updated on the latest information about the patch until
+              its release.
+            </p>
             <a href="https://na.finalfantasyxiv.com/endwalker/patch_6_4/" target="_blank" class="btn btn-danger">Learn More</a>
           </div>
-          <hr>
+          <hr />
           <div class="card-body">
             <h2 class="card-title text-danger">Live Letter From Producer</h2>
-            <br>
+            <br />
             <iframe width="720" height="480" src="https://www.youtube.com/embed/4i8PijfPKIs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           </div>
-          <hr>
+          <hr />
           <div class="card-body">
-            <h2 class="card-title text-danger">Moogle Treasure Trove Event</h2>
-            <img src="./img/6ecf93237102697dc70d42b9ab22b717da5193e2.png" alt="">
-            <br>
-            <p class="card-text">Collect Irregular Tomestones And Get Rare Items !</p>
+            <h2 class="card-title text-danger">
+              Moogle Treasure Trove Event
+            </h2>
+            <img src="./img/6ecf93237102697dc70d42b9ab22b717da5193e2.png" alt="" />
+            <br />
+            <p class="card-text">
+              Collect Irregular Tomestones And Get Rare Items !
+            </p>
             <a href="https://na.finalfantasyxiv.com/lodestone/special/mogmog-collection/202304/y7377p4z7j" target="_blank" class="btn btn-danger">Learn More</a>
           </div>
-          <hr>
+          <hr />
           <div class="card-body">
             <h5 class="card-title">Special title treatment</h5>
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <p class="card-text">
+              With supporting text below as a natural lead-in to additional
+              content.
+            </p>
             <a href="#" class="btn btn-danger">Learn More</a>
           </div>
-          <hr>
+          <hr />
         </div>
       </section>
       <br />
       <!-- Section Media -->
       <section id="media">
-        <div class="">
-          <a href="./img/2021-12-20_15-56-23-088_Best so far.png"><img src="./img/Thumb/2021-12-20_15-56-23-088_Best so far.png" alt="..."></a>
-          <a href="./img/2022-06-18_13-21-59-421_Off.png"><img src="./img/Thumb/2022-06-18_13-21-59-421_Off.png" alt="..."></a>
-          <a href="./img/2022-06-25_14-08-02-084_Best so far.png"><img src="./img/Thumb/2022-06-25_14-08-02-084_Best so far.png" alt="..."></a>
-          <a href="./img/2022-09-02_12-43-04-881_Fairy Blackthorns.png"><img src="./img/Thumb/2022-09-02_12-43-04-881_Fairy Blackthorns.png" alt="..."></a>
-          <a href="./img/ffxiv_dx11 2023-03-26 07-13-18.png"><img src="./img/Thumb/ffxiv_dx11 2023-03-26 07-13-18.png" alt="..."></a>
-          <a href="./img/ffxiv_dx11 2023-03-26 17-55-54.png"><img src="./img/Thumb/ffxiv_dx11 2023-03-26 17-55-54.png" alt="..."></a>
-          <a href="./img/ffxiv_dx11 2023-04-07 22-23-19.png"><img src="./img/Thumb/ffxiv_dx11 2023-04-07 22-23-19.png" alt="..."></a>
-          <a href="./img/ffxiv_dx11 2023-04-18 21-50-30.png"><img src="./img/Thumb/ffxiv_dx11 2023-04-18 21-50-30.png" alt="..."></a>
-          <a href="./img/ffxiv_dx11 2023-04-19 15-48-14.png"><img src="./img/Thumb/ffxiv_dx11 2023-04-19 15-48-14.png" alt="..."></a>
-          <a href="./img/ffxiv_dx11 2023-04-19 16-02-29.png"><img src="./img/Thumb/ffxiv_dx11 2023-04-19 16-02-29.png" alt="..."></a>
+        <div class="container">
+          <div class="image-container">
+            <div class="images">
+              <img src="./img/2021-12-20_15-56-23-088_Best so far.png" alt="" />
+            </div>
+            <div class="images">
+              <img src="./img/2022-06-18_13-21-59-421_Off.png" alt="" />
+            </div>
+            <div class="images">
+              <img src="./img/2022-06-25_14-08-02-084_Best so far.png" alt="" />
+            </div>
+            <div class="images">
+              <img src="./img/2022-09-02_12-43-04-881_Fairy Blackthorns.png" alt="" />
+            </div>
+            <div class="images">
+              <img src="./img/ffxiv_dx11 2023-03-26 07-13-18.png" alt="" />
+            </div>
+            <div class="images">
+              <img src="./img/ffxiv_dx11 2023-03-26 17-55-54.png" alt="" />
+            </div>
+            <div class="images">
+              <img src="./img/ffxiv_dx11 2023-04-07 22-23-19.png" alt="" />
+            </div>
+            <div class="images">
+              <img src="./img/ffxiv_dx11 2023-04-18 21-50-30.png" alt="" />
+            </div>
+            <div class="images">
+              <img src="./img/ffxiv_dx11 2023-04-19 15-48-14.png" alt="" />
+            </div>
+            <div class="images">
+              <img src="./img/ffxiv_dx11 2023-04-19 16-02-29.png" alt="" />
+            </div>
+          </div>
+          <!-- popup -->
+          <div class="popup-image">
+            <span>&times;</span>
+            <img src="./img/2021-12-20_15-56-23-088_Best so far.png" alt="" />
+          </div>
         </div>
       </section>
       <hr />
@@ -175,11 +217,28 @@
 
   <!-- footer -->
   <footer class="bg-black bg-gradient text-white mt-1 fw-bold text-center p-3">
-    <p> &copy; Created by The Etheirys Community</p>
+    <p>&copy; 2023 The Etheirys Community. All rights reserved.</p>
   </footer>
   <!-- Script -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+  <script>
+    document.querySelectorAll(".image-container img").forEach((image) => {
+      image.onclick = () => {
+        document.querySelector(".popup-image").style.display = "block";
+        document.querySelector(".popup-image img").src =
+          image.getAttribute("src");
+      };
+    });
+
+    document.querySelector(".popup-image span").onclick = () => {
+      document.querySelector(".popup-image").style.display = "none";
+    };
+  </script>
   <script src="./js/script.js"></script>
+  <script src="./js/lightbox.js"></script>
+</body>
+</body>
+
 </body>
 
 </html>
