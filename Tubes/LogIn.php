@@ -11,39 +11,9 @@
             <a href="index.php">The Etherys</a>
           </div>
         </div>
-        <div class="top-tombol">
-          <div class="tombol-login bg-black bg-gradient p-1">
-            <div class="p-3 fs-5">
-              <span>
-                <a href="LogIn.php">LOG IN</a>
-              </span>
-            </div>
-          </div>
-          <div class="tombol-login bg-black bg-gradient p-1">
-            <div class="p-3 fs-5">
-              <span>
-                <a href="LogIn.php">SIGN UP</a>
-              </span>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </div>
-  <nav class="bg-dark bg-gradient navbar-sm">
-    <div class="nav_list">
-      <ul>
-        <li><a href="#home">HOME</a></li>
-        <li><a href="#game">GAME</a></li>
-        <li><a href="#news">NEWS</a></li>
-        <li>
-          <a href="https://forum.square-enix.com/ffxiv/forums/667" target="_blank">FORUM</a>
-        </li>
-        <li><a href="#media">MEDIA</a></li>
-        <li><a href="#about">ABOUT US</a></li>
-      </ul>
-    </div>
-  </nav>
 </div>
 <div class="container">
   <div class="login-container">

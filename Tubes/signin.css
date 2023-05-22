@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  color: #c1aac6;
+  color: grey;
   background: #131315;
   font-family: "Montserrat", monospace;
   font-weight: bold;
@@ -12,32 +12,15 @@ body {
   box-sizing: border-box;
 }
 .header {
-  position: fixed;
+  padding: 30px;
+  display: block;
   width: 100%;
-  z-index: 9999;
-}
-.top {
-  margin-left: 50px;
-  margin-right: 50px;
-}
-.top a {
-  text-decoration: none;
+  color: white;
 }
 .logo {
   font-family: "Tiro Devanagari Sanskrit", serif;
-  font-size: 30px;
+  font-size: 40px;
   font-weight: bold;
-}
-.logo a {
-  color: white;
-  text-decoration: none;
-}
-span a {
-  text-decoration: none;
-  color: white;
-}
-.top-tombol {
-  display: flex;
 }
 .top-tombol span:hover {
   background-color: grey;
@@ -118,7 +101,7 @@ a {
 .login-container .sign-in:checked + .item,
 .login-container .sign-up:checked + .item {
   color: #fff;
-  border-color: #df00ff;
+  border-color: red;
 }
 
 .login-form {
@@ -152,10 +135,10 @@ a {
   background: rgba(255, 255, 255, 0.1);
 }
 
-.login-form .group input[data-type="password"] {
+/* .login-form .group input[data-type="password"] {
   text-security: circle;
   -webkit-text-security: circle;
-}
+} */
 
 .login-form .group .label {
   color: #aaa;
@@ -163,7 +146,7 @@ a {
 }
 
 .login-form .group .button {
-  background: #df00ff;
+  background: red;
 }
 
 .login-form .group .check:checked + label {

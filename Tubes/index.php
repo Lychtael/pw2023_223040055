@@ -117,15 +117,12 @@
               keep you updated on the latest information about the patch until
               its release.
             </p>
-            <a href="https://na.finalfantasyxiv.com/endwalker/patch_6_4/" target="_blank" class="btn btn-danger">Learn More</a>
           </div>
-          <hr />
           <div class="card-body">
             <h2 class="card-title text-danger">Live Letter From Producer</h2>
             <br />
             <iframe width="720" height="480" src="https://www.youtube.com/embed/4i8PijfPKIs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           </div>
-          <hr />
           <div class="card-body">
             <h2 class="card-title text-danger">
               Moogle Treasure Trove Event
@@ -135,16 +132,9 @@
             <p class="card-text">
               Collect Irregular Tomestones And Get Rare Items !
             </p>
-            <a href="https://na.finalfantasyxiv.com/lodestone/special/mogmog-collection/202304/y7377p4z7j" target="_blank" class="btn btn-danger">Learn More</a>
           </div>
-          <hr />
           <div class="card-body">
-            <h5 class="card-title">Special title treatment</h5>
-            <p class="card-text">
-              With supporting text below as a natural lead-in to additional
-              content.
-            </p>
-            <a href="#" class="btn btn-danger">Learn More</a>
+            <a href="News.php" class="btn btn-danger">Show More</a>
           </div>
           <hr />
         </div>
@@ -175,15 +165,6 @@
             <div class="images">
               <img src="./img/ffxiv_dx11 2023-04-07 22-23-19.png" alt="" />
             </div>
-            <div class="images">
-              <img src="./img/ffxiv_dx11 2023-04-18 21-50-30.png" alt="" />
-            </div>
-            <div class="images">
-              <img src="./img/ffxiv_dx11 2023-04-19 15-48-14.png" alt="" />
-            </div>
-            <div class="images">
-              <img src="./img/ffxiv_dx11 2023-04-19 16-02-29.png" alt="" />
-            </div>
           </div>
           <!-- popup -->
           <div class="popup-image">
@@ -198,18 +179,8 @@
       <section id="about">
         <h1>ABOUT US</h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis rem
-          saepe optio minus, ipsum laborum temporibus reprehenderit alias
-          quisquam earum magni natus voluptate, inventore ipsam officiis
-          magnam sit sapiente cum sint vero! Ratione nulla commodi provident
-          eius dolore iure expedita laudantium sit culpa libero impedit nobis
-          doloremque eaque corporis amet, voluptates eos aperiam nisi. Alias
-          repudiandae, nemo praesentium laboriosam asperiores omnis
-          accusantium quas, quidem assumenda vel et aspernatur animi aliquam
-          soluta quam ipsam. Odit, voluptatum quam eveniet explicabo ad
-          excepturi reprehenderit eaque, ratione earum doloremque tempore
-          fugiat officia, amet corrupti hic. Impedit ducimus mollitia amet
-          nostrum id laborum animi nihil?
+          The Etheirys is a Final Fantasy XIV Community that provides you with the latest news, updates,
+          and any other contents from the Final Fantasy XIV community throughout the whole world.
         </p>
       </section>
     </div>
@@ -235,7 +206,6 @@
     };
   </script>
   <script src="./js/script.js"></script>
-  <script src="./js/lightbox.js"></script>
 </body>
 </body>
 
