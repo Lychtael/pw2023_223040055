@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Nanum Gothic", sans-serif;
+  background-image: url(../img/black-concrete-wall.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.header {
+  width: 100%;
+}
+.top {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.top a {
+  text-decoration: none;
+}
+.logo {
+  font-family: "Tiro Devanagari Sanskrit", serif;
+  font-size: 30px;
+  font-weight: bold;
+}
+.logo a {
+  color: white;
+  text-decoration: none;
+}
+span a {
+  text-decoration: none;
+  color: white;
+}
+.top-tombol {
+  display: flex;
+}
+.top-tombol span:hover {
+  background-color: grey;
+}

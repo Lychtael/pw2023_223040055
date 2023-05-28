@@ -1,64 +1,79 @@
-<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="signin.css">
+<?php ?>
+<!DOCTYPE html>
+<html lang="en">
 
-<div class="header">
-  <div class="container-fluid bg-black bg-gradient text-white shadow p-2">
-    <div class="top">
-      <div class="d-flex">
-        <div class="p-2 flex-grow-1">
-          <div class="logo">
-            <a href="index.php">The Etherys</a>
-          </div>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/style.signin.css">
+
+    <div class="header">
+        <div class="container-fluid bg-black bg-gradient text-white shadow p-2">
+            <div class="top">
+                <div class="d-flex">
+                    <div class="p-2 flex-grow-1">
+                        <div class="logo">
+                            <a href="index.php">The Etherys</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
-</div>
-<div class="container">
-  <div class="login-container">
-    <input id="item-1" type="radio" name="item" class="sign-in" checked><label for="item-1" class="item">Sign In</label>
-    <input id="item-2" type="radio" name="item" class="sign-up"><label for="item-2" class="item">Sign Up</label>
-    <div class="login-form">
-      <div class="sign-in-htm">
-        <div class="group">
-          <input placeholder="Username" id="user" type="text" class="input">
-        </div>
-        <div class="group">
-          <input placeholder="Password" id="pass" type="password" class="input" data-type="password">
-        </div>
+    <div class="container">
+        <div class="login-container">
+            <input id="item-1" type="radio" name="item" class="sign-in" checked><label for="item-1" class="item">Sign In</label>
+            <input id="item-2" type="radio" name="item" class="sign-up"><label for="item-2" class="item">Sign Up</label>
+            <div class="login-form">
+                <div class="sign-in-htm">
+                    <div class="group">
+                        <input placeholder="Username" id="user" type="text" class="input">
+                    </div>
+                    <div class="group">
+                        <input placeholder="Password" id="pass" type="password" class="input" data-type="password">
+                    </div>
 
-        <div class="group">
-          <input type="submit" class="button" value="Sign In">
-        </div>
-        <div class="hr"></div>
-        <div class="footer">
-          <a href="#forgot">Forgot Password?</a>
-        </div>
-      </div>
-      <div class="sign-up-htm">
-        <div class="group">
-          <input placeholder="Username" id="user" type="text" class="input">
-        </div>
+                    <div class="group">
+                        <input type="submit" class="button" value="Sign In">
+                    </div>
+                    <div class="hr"></div>
+                    <div class="footer">
+                        <a href="#forgot">Forgot Password?</a>
+                    </div>
+                </div>
+                <div class="sign-up-htm">
+                    <div class="group">
+                        <input placeholder="Username" id="user" type="text" class="input">
+                    </div>
 
-        <div class="group">
-          <input placeholder="Email adress" id="pass" type="text" class="input">
-        </div>
+                    <div class="group">
+                        <input placeholder="Email adress" id="pass" type="text" class="input">
+                    </div>
 
-        <div class="group">
-          <input placeholder="Password" id="pass" type="password" class="input" data-type="password">
-        </div>
-        <div class="group">
-          <input placeholder="Repeat password" id="pass" type="password" class="input" data-type="password">
-        </div>
+                    <div class="group">
+                        <input placeholder="Password" id="pass" type="password" class="input" data-type="password">
+                    </div>
+                    <div class="group">
+                        <input placeholder="Repeat password" id="pass" type="password" class="input" data-type="password">
+                    </div>
 
-        <div class="group">
-          <input type="submit" class="button" value="Sign Up">
+                    <div class="group">
+                        <input type="submit" class="button" value="Sign Up">
+                    </div>
+                    <div class="hr"></div>
+                    <div class="footer">
+                        <label for="item-1">Already have an account?</a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="hr"></div>
-        <div class="footer">
-          <label for="item-1">Already have an account?</a>
-        </div>
-      </div>
-    </div>
-  </div>
+</body>
+
+</html>
