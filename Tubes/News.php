@@ -20,23 +20,16 @@
         <div class="d-flex">
           <div class="p-2 flex-grow-1">
             <div class="logo">
-              <a href="index.php">The Etherys</a>
+              <a href="Main.php">The Etherys</a>
             </div>
           </div>
-          <div class="top-tombol">
-            <div class="tombol-login bg-black bg-gradient p-1">
-              <div class="p-3 fs-5">
-                <span>
-                  <a href="LogIn.php">LOG IN</a>
-                </span>
-              </div>
-            </div>
-            <div class="tombol-login bg-black bg-gradient p-1">
-              <div class="p-3 fs-5">
-                <span>
-                  <a href="LogIn.php">SIGN UP</a>
-                </span>
-              </div>
+          <div class="top-tombol p-2">
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="./img/profile-circle-svgrepo-com.svg" alt=""></button>
+              <ul class="dropdown-menu">
+                <li><button class="dropdown-item" type="button">Profile</button></li>
+                <li><button class="dropdown-item" type="button">Log out</button></li>
+              </ul>
             </div>
           </div>
         </div>
@@ -44,7 +37,7 @@
     </div>
   </div>
   <!-- main contents -->
-  <div class="container sm bg-dark text-white text-center p-3">
+  <div class="container sm bg-dark text-white text-center p-3 mt-3">
     <div class="bg-dark text-white">
       <div class="card-body">
         <h1 class="card-title text-danger">

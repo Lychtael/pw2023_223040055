@@ -1,4 +1,6 @@
-<?php  ?>
+<?php
+require('functions.php');
+?>
 
 
 <!DOCTYPE html>
@@ -30,14 +32,14 @@
               <div class="tombol-login bg-black bg-gradient p-1">
                 <div class="p-3 fs-5">
                   <span>
-                    <a href="LogIn.php">LOG IN</a>
+                    <a href="Login.php">LOG IN</a>
                   </span>
                 </div>
               </div>
               <div class="tombol-login bg-black bg-gradient p-1">
                 <div class="p-3 fs-5">
                   <span>
-                    <a href="LogIn.php">SIGN UP</a>
+                    <a href="Register.php">SIGN UP</a>
                   </span>
                 </div>
               </div>
@@ -142,6 +144,8 @@
       <br />
       <!-- Section Media -->
       <section id="media">
+        <h1>GALLERY</h1>
+        <br>
         <div class="container">
           <div class="image-container">
             <div class="images">

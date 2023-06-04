@@ -4,71 +4,192 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Etheirys | Community Page</title>
-    <link rel="stylesheet" href="./css/style.main.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Etheirys | Unofficial Final Fantasy XIV Forums and news</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./css/style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Sanskrit&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet" />
 </head>
 
 <body>
-    <nav class="navbar navbar-dark bg-dark fixed-top">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="Main.php">The Etheirys</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">The Etheirys</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">News</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://forum.square-enix.com/ffxiv/forums/667" target="_blank">Forum</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Etheirys Forum</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Gallery</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Dropdown
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-dark">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <form class="d-flex mt-3" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-danger" type="submit">Search</button>
-                    </form>
+    <!-- head -->
+    <section id="home">
+        <div class="header">
+            <div class="container-fluid bg-black bg-gradient text-white shadow p-2">
+                <div class="top">
+                    <div class="d-flex">
+                        <div class="p-2 flex-grow-1">
+                            <div class="logo">
+                                <a href="Main.php">The Etherys</a>
+                            </div>
+                        </div>
+                        <div class="top-tombol p-2">
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="./img/profile-circle-svgrepo-com.svg" alt=""></button>
+                                <ul class="dropdown-menu">
+                                    <li><button class="dropdown-item" type="button">Profile</button></li>
+                                    <li><button class="dropdown-item" type="button">Log out</button></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <nav class="bg-dark bg-gradient navbar-sm">
+                <div class="nav_list">
+                    <ul>
+                        <li><a href="#home">HOME</a></li>
+                        <li><a href="#game">GAME</a></li>
+                        <li><a href="#news">NEWS</a></li>
+                        <li>
+                            <a href="https://forum.square-enix.com/ffxiv/forums/667" target="_blank">FORUM</a>
+                        </li>
+                        <li><a href="">Etheirys Forum</a></li>
+                        <li><a href="#media">MEDIA</a></li>
+                    </ul>
+                </div>
+            </nav>
         </div>
-    </nav>
+    </section>
+    <!-- Banner / Slider -->
+    <div class="main_content">
+        <div class="container sm p-1">
+            <div class="slider">
+                <img id="img1" src="./img/ARR.jpg" alt="A Realm Reborn" />
+                <img id="img2" src="./img/Stormblood.jpeg" alt="Stormblood" />
+                <img id="img3" src="./img/SHB.jpg" alt="Shadowbringer" />
+                <img id="img4" src="./img/Endwalker.jpg" alt="Endwalker" />
+            </div>
+            <div class="nav-btn">
+                <span class="dot active" onclick="changeSlide(0)"></span>
+                <span class="dot" onclick="changeSlide(1)"></span>
+                <span class="dot" onclick="changeSlide(2)"></span>
+                <span class="dot" onclick="changeSlide(3)"></span>
+            </div>
+        </div>
+        <!-- Main Contents -->
+        <div class="container sm bg-dark text-white p-3 text-center">
+            <!-- Section Game -->
+            <section id="game">
+                <div class="card text-bg-dark">
+                    <img src="./img/-0g_F2CUNytxUB-1T7p0eK1YaI.jpg" class="card-img" alt="FinalFantasyXIV" />
+                    <div class="card-img-overlay">
+                        <h1 class="card-title">Final Fantasy XIV</h1>
+                        <p class="card-text">
+                            Did you know that the critically acclaimed MMORPG Final Fantasy
+                            XIV has a free trial, and includes the entirety of A Realm
+                            Reborn AND the award-winning Heavensward expansion up to level
+                            60 with no restrictions on playtime? Sign up, and enjoy Eorzea
+                            today!
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <hr />
+            <br />
+            <!-- Section News -->
+            <section id="news" class="card bg-dark text-white">
+                <h1>NEWS</h1>
+                <hr />
+                <div class="bg-dark text-white">
+                    <div class="card-body">
+                        <h2 class="card-title text-danger">
+                            Patch 6.4─The Dark Throne Special Site Update
+                        </h2>
+                        <img src="./img/173a2048d61c0d2fee9eb614f3c2baf034771837.png" alt="" />
+                        <br />
+                        <p class="card-text">
+                            The Patch 6.4 special site has been updated with details on
+                            upcoming content including the main scenario; the new raid
+                            dungeon, Pandæmonium: Anabaseios; the new dungeon, the
+                            Aetherfont; the Unreal trial, Containment Bay Z1T9; and new
+                            additions to Duty Support. Be sure to visit regularly as we’ll
+                            keep you updated on the latest information about the patch until
+                            its release.
+                        </p>
+                    </div>
+                    <div class="card-body">
+                        <h2 class="card-title text-danger">Live Letter From Producer</h2>
+                        <br />
+                        <iframe width="720" height="480" src="https://www.youtube.com/embed/4i8PijfPKIs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <div class="card-body">
+                        <h2 class="card-title text-danger">
+                            Moogle Treasure Trove Event
+                        </h2>
+                        <img src="./img/6ecf93237102697dc70d42b9ab22b717da5193e2.png" alt="" />
+                        <br />
+                        <p class="card-text">
+                            Collect Irregular Tomestones And Get Rare Items !
+                        </p>
+                    </div>
+                    <div class="card-body">
+                        <a href="News.php" class="btn btn-danger">Show More</a>
+                    </div>
+                    <hr />
+                </div>
+            </section>
+            <br />
+            <!-- Section Media -->
+            <section id="media">
+                <div class="container">
+                    <div class="image-container">
+                        <div class="images">
+                            <img src="./img/2021-12-20_15-56-23-088_Best so far.png" alt="" />
+                        </div>
+                        <div class="images">
+                            <img src="./img/2022-06-18_13-21-59-421_Off.png" alt="" />
+                        </div>
+                        <div class="images">
+                            <img src="./img/2022-06-25_14-08-02-084_Best so far.png" alt="" />
+                        </div>
+                        <div class="images">
+                            <img src="./img/2022-09-02_12-43-04-881_Fairy Blackthorns.png" alt="" />
+                        </div>
+                        <div class="images">
+                            <img src="./img/ffxiv_dx11 2023-03-26 07-13-18.png" alt="" />
+                        </div>
+                        <div class="images">
+                            <img src="./img/ffxiv_dx11 2023-03-26 17-55-54.png" alt="" />
+                        </div>
+                        <div class="images">
+                            <img src="./img/ffxiv_dx11 2023-04-07 22-23-19.png" alt="" />
+                        </div>
+                    </div>
+                    <!-- popup -->
+                    <div class="popup-image">
+                        <span>&times;</span>
+                        <img src="./img/2021-12-20_15-56-23-088_Best so far.png" alt="" />
+                    </div>
+                </div>
+            </section>
+            <hr />
+            <br />
+        </div>
+    </div>
 
-    <!-- script -->
+    <!-- footer -->
+    <footer class="bg-black bg-gradient text-white mt-1 fw-bold text-center p-3">
+        <p>&copy; 2023 The Etheirys Community. All rights reserved.</p>
+    </footer>
+    <!-- Script -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script>
+        document.querySelectorAll(".image-container img").forEach((image) => {
+            image.onclick = () => {
+                document.querySelector(".popup-image").style.display = "block";
+                document.querySelector(".popup-image img").src =
+                    image.getAttribute("src");
+            };
+        });
 
+        document.querySelector(".popup-image span").onclick = () => {
+            document.querySelector(".popup-image").style.display = "none";
+        };
+    </script>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>

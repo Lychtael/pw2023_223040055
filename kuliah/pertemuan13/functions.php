@@ -81,7 +81,7 @@ function dd($value)
   echo "</pre>";
 }
 
-function uriIS($uri)
+function urils($url)
 {
-  return ($_SERVER["REQUEST_URI"] === BASE_URL) ? 'active' : '';
+  return ($_SERVER["REQUEST_URL"] === BASE_URL) ? 'active' : '';
 }
