@@ -1,4 +1,11 @@
 <?php
+session_start();
+
+if (!isset($_SESSION["login"])) {
+  header("Location: Login.php");
+  exit;
+}
+
 require('functions.php');
 ?>
 
@@ -32,14 +39,7 @@ require('functions.php');
               <div class="tombol-login bg-black bg-gradient p-1">
                 <div class="p-3 fs-5">
                   <span>
-                    <a href="Login.php">LOG IN</a>
-                  </span>
-                </div>
-              </div>
-              <div class="tombol-login bg-black bg-gradient p-1">
-                <div class="p-3 fs-5">
-                  <span>
-                    <a href="Register.php">SIGN UP</a>
+                    <a href="Logout.php">LOG OUT</a>
                   </span>
                 </div>
               </div>

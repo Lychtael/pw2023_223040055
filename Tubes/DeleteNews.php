@@ -1,4 +1,11 @@
 <?php
+session_start();
+
+if (!isset($_SESSION["login"])) {
+    header("Location: Login.php");
+    exit;
+}
+
 require 'functions.php';
 
 $id_news = htmlspecialchars($_GET['id']);

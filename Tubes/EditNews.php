@@ -1,4 +1,11 @@
 <?php
+session_start();
+
+if (!isset($_SESSION["login"])) {
+    header("Location: Login.php");
+    exit;
+}
+
 $conn = mysqli_connect("localhost:3306", "root", "", "pwtubes_223040055");
 require 'functions.php';
 $id_news = $_GET["id"];

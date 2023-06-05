@@ -56,35 +56,51 @@ if (isset($_POST["register"])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
-    <link rel="stylesheet" href="./css/style.signin.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
+
+    <style>
+        body {
+            background-image: url(img/black-concrete-wall.jpg);
+        }
+
+        ul li {
+            list-style-type: none;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>Create An Account</h1>
-    <form action="" method="post">
-
-        <ul>
-            <li>
-                <label for="username">username :</label>
-                <input type="text" name="username" id="username">
-            </li>
-            <li>
-                <label for="email">email :</label>
-                <input type="text" name="email" id="email">
-            </li>
-            <li>
-                <label for="password">password :</label>
-                <input type="password" name="password" id="password">
-            </li>
-            <li>
-                <label for="password2">re-type password :</label>
-                <input type="password" name="password2" id="password2">
-            </li>
-            <li>
-                <button type="submit" name="register">Register</button>
-            </li>
-        </ul>
-    </form>
+    <div class="bg-dark bg-gradient text-white position-absolute top-50 start-50 translate-middle rounded border-danger p-5">
+        <h1>Create An Account</h1>
+        <form action="" method="post">
+            <ul>
+                <li>
+                    <label for="username">username :</label><br>
+                    <input type="text" name="username" id="username">
+                </li>
+                <li>
+                    <label for="email">email :</label><br>
+                    <input type="text" name="email" id="email">
+                </li>
+                <li>
+                    <label for="password">password :</label><br>
+                    <input type="password" name="password" id="password">
+                </li>
+                <li>
+                    <label for="password2">re-type password :</label><br>
+                    <input type="password" name="password2" id="password2">
+                </li>
+                <br>
+                <li>
+                    <button type="submit" name="register">Register</button>
+                </li>
+                <li>
+                    <a href="Login.php">Log In</a>
+                </li>
+            </ul>
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 </body>
 
 </html>
