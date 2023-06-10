@@ -22,7 +22,6 @@ function query($query)
 
 
 
-
 function tambahNews($data)
 {
     $conn = koneksi();
@@ -30,16 +29,62 @@ function tambahNews($data)
     $title = htmlspecialchars($data['title']);
     $image = htmlspecialchars($data['image']);
     $description = htmlspecialchars($data['description']);
+    // upload gambar
+    $image = upload();
+    if (!$image) {
+        return false;
+    }
 
-    $query = "INSERT INTO
-              news_items
-            VALUES (null, '$title','$image','$description')";
+    $query = "INSERT INTO news_items
+              VALUES ('$title','$image','$description')";
 
     mysqli_query($conn, $query) or die(mysqli_error($conn));
 
     return mysqli_affected_rows($conn);
 }
 
+
+function upload()
+{
+    // Cek apakah input file 'gambar' ada
+    if (!isset($_FILES['gambar'])) {
+        var_dump($_FILES['gambar']);
+        return "Gambar tidak ditemukan";
+    }
+
+    $namafile = $_FILES['gambar']['name'];
+    $ukuranfile = $_FILES['gambar']['size'];
+    $error = $_FILES['gambar']['error'];
+    $tmpName = $_FILES['gambar']['tmp_name'];
+
+    // Cek apakah tidak ada gambar yang diupload
+    if ($error === 4) {
+        return "Pilih gambar terlebih dahulu";
+    }
+
+    // Cek apakah yang diupload adalah gambar
+    $ekstensigambarValid = ['jpg', 'jpeg', 'png'];
+    $ekstensigambar = explode('.', $namafile);
+    $ekstensigambar = strtolower(end($ekstensigambar));
+    if (!in_array($ekstensigambar, $ekstensigambarValid)) {
+        return "Yang Anda upload bukan gambar";
+    }
+
+    // Cek jika ukurannya terlalu besar
+    if ($ukuranfile > 50000000) {
+        return "Ukuran gambar terlalu besar";
+    }
+
+    // Lolos pengecekan, gambar siap diupload
+    // Generate nama gambar baru
+    $namafilebaru = uniqid();
+    $namafilebaru .= '.';
+    $namafilebaru .= $ekstensigambar;
+
+    move_uploaded_file($tmpName, 'img/' . $namafilebaru);
+
+    return $namafilebaru;
+}
 function hapusNews($id_news)
 {
     $conn = koneksi();
@@ -68,6 +113,33 @@ function editNews($data)
                 image = '$image',
                 description = '$description'
                 WHERE id_news = $id_news
+                ";
+
+    $result = mysqli_query($conn, $query);
+    if ($result) {
+        return "Success: Data has been updated.";
+    } else {
+        return "Error: Failed to update data. " . mysqli_error($conn);
+    }
+}
+function editUser($data)
+{
+    $conn = koneksi();
+
+    if (!isset($data['id'])) {
+        return "Error: Missing 'id_news' key in the data array.";
+    }
+
+    $id = $data["id"];
+    $username = htmlspecialchars($data['username']);
+    $email = htmlspecialchars($data['email']);
+    $password = htmlspecialchars($data['password']);
+
+    $query = "UPDATE users SET 
+                username = '$username',
+                email = '$email',
+                password = '$password'
+                WHERE id = $id
                 ";
 
     $result = mysqli_query($conn, $query);
@@ -109,28 +181,3 @@ function search($keyword)
     description LIKE '%" . $keyword . "%'";
     return query($query);
 }
-
-// function registrasi($data)
-// {
-//     global $conn;
-
-//     $username = htmlspecialchars($data["username"]);
-//     $email = htmlspecialchars($data["email"]);
-//     $password = $data["password"];
-//     $password2 = $data["password2"];
-
-//     // cek password
-//     if ($password !== $password2) {
-//         echo "<script>
-//                 alert('password does not match');
-//              </script>";
-//         return false;
-//     }
-
-//     // enkripsi pass
-//     $password = password_hash($password, PASSWORD_DEFAULT);
-
-//     // tambah user ke db
-//     mysqli_query($conn, "INSERT INTO users VALUES(null,'$username','$email','$password')");
-//     return mysqli_affected_rows($conn);
-// }

@@ -2,12 +2,12 @@
 $conn = mysqli_connect("localhost:3306", "root", "", "pwtubes_223040055");
 require '../functions.php';
 $id = $_GET["id"];
-$news_item = query("SELECT * FROM news_items WHERE id = $id")[0];
+$user = query("SELECT * FROM users WHERE id = $id")[0];
 
 if (isset($_POST["editUser"])) {
     $_POST["id"] = $_POST["id"];
 
-    if (editNews($_POST) > 0) {
+    if (editUser($_POST) > 0) {
         echo "
             <script>
                 alert('Successfully updated!');
@@ -32,19 +32,20 @@ if (isset($_POST["editUser"])) {
 
 <div class="container mt-3">
     <div id="add-news" class="mt-4">
-        <h2>ADD AN ACCOUNT</h2>
+        <h2>Edit Account</h2>
         <form method="POST">
+            <input type="hidden" name="id" value="<?= $user['id']; ?>">
             <div class="mb-3 w-50">
                 <label for="username" class="form-label">Username</label>
-                <input type="text" class="form-control" id="username" name="username" autofocus required>
+                <input type="text" class="form-control" id="username" name="username" value="<?= $user['username']; ?>" autofocus required>
             </div>
             <div class="mb-3 w-50">
                 <label for="email" class="form-label">Email</label>
-                <input type="text" class="form-control" id="email" name="email" required>
+                <input type="text" class="form-control" id="email" name="email" value="<?= $user['email']; ?>" required>
             </div>
             <div class="mb-3 w-50">
                 <label for="password" class="form-label">Password</label>
-                <input type="password" class="form-control" id="password" name="password" required>
+                <input type="password" class="form-control" id="password" name="password" value="<?= $user['password']; ?>" required>
             </div>
             <button class="btn btn-primary" type="submit" name="editUser">Done</button>
         </form>

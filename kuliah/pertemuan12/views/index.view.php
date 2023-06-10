@@ -24,7 +24,7 @@
       <?php foreach ($students as $student) : ?>
         <tr>
           <th scope="row"><?= $student["id"]; ?></th>
-          <td><img src="img/image.jpg" width="100" class="rounded-circle"></td>
+          <td><img src="img/default.png" width="100" class="rounded-circle"></td>
           <td><?= $student["nim"]; ?></td>
           <td><?= $student["nama"]; ?></td>
           <td><?= $student["email"]; ?></td>

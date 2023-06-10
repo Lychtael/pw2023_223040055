@@ -21,3 +21,8 @@ function changeSlide(n) {
   dots[currentImg].className += " active";
 }
 var timer = setInterval(changeSlide, interval);
+
+const keyword = document.getElementById("keyword");
+const searchContainer = document.getElementById("search-container");
+
+// event ketika kita mengetikan keyword pencarian

@@ -20,11 +20,20 @@ if (isset($_POST["login"])) {
     if (mysqli_num_rows($result) === 1) {
         // cek password
         $row = mysqli_fetch_assoc($result);
+        $role = $row["role"];
         if (password_verify($password, $row["password"])) {
+            if ($role == 'admin') {
+                // Redirect ke halaman admin
+                $_SESSION["login"] = true;
+                header("Location: Admin.php");
+                exit;
+            } elseif ($role == 'user') {
+                // Redirect ke halaman index
+                $_SESSION["login"] = true;
+                header("Location: index.php");
+                exit;
+            }
             // set session
-            $_SESSION["login"] = true;
-            header("Location: index.php");
-            exit;
         }
     }
     $error = true;
@@ -38,7 +47,7 @@ if (isset($_POST["login"])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Enter The Etheirys</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
     <style>
         body {
@@ -53,12 +62,13 @@ if (isset($_POST["login"])) {
 
 <body>
 
-
-    <?php if (isset($error)) : ?>
-        <p style="color: red;"><i>Username / Password salah</i></p>
-    <?php endif; ?>
     <div class="bg-dark bg-gradient text-white position-absolute top-50 start-50 translate-middle rounded border-danger p-5">
+
         <h1>LOG IN</h1>
+        <br>
+        <?php if (isset($error)) : ?>
+            <p style="color: red;"><i>Username / Password salah</i></p>
+        <?php endif; ?>
         <form action="" method="post">
             <ul>
                 <li>
