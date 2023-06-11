@@ -34,7 +34,7 @@ $news_items = query($query);
             <?php foreach ($news_items as $news_item) : ?>
                 <tr>
                     <th scope="row"><?= $news_item["id_news"]; ?></th>
-                    <td><img src="img/Endwalker.jpg" width="150"></td>
+                    <td><img src="img/<?= $news_item["image"]; ?>" style="width : 200; height:100px;"></td>
                     <td><?= $news_item["title"]; ?></td>
                     <td><?= $news_item["description"]; ?></td>
                     <td>
@@ -54,4 +54,3 @@ $news_items = query($query);
         </div>
     </div>
 <?php endif; ?>
-</div>

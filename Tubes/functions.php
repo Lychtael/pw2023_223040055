@@ -20,15 +20,14 @@ function query($query)
     return $rows;
 }
 
-
-
 function tambahNews($data)
 {
     $conn = koneksi();
 
     $title = htmlspecialchars($data['title']);
-    $image = htmlspecialchars($data['image']);
+    // $image = htmlspecialchars($data['image']);
     $description = htmlspecialchars($data['description']);
+
     // upload gambar
     $image = upload();
     if (!$image) {
@@ -36,55 +35,55 @@ function tambahNews($data)
     }
 
     $query = "INSERT INTO news_items
-              VALUES ('$title','$image','$description')";
+              VALUES (null,'$title','$image','$description')";
 
     mysqli_query($conn, $query) or die(mysqli_error($conn));
 
     return mysqli_affected_rows($conn);
 }
 
-
 function upload()
 {
-    // Cek apakah input file 'gambar' ada
-    if (!isset($_FILES['gambar'])) {
-        var_dump($_FILES['gambar']);
-        return "Gambar tidak ditemukan";
-    }
+    $namaFile = $_FILES['image']['name'];
+    $ukuranFile = $_FILES['image']['size'];
+    $error = $_FILES['image']['error'];
+    $tmpName = $_FILES['image']['tmp_name'];
 
-    $namafile = $_FILES['gambar']['name'];
-    $ukuranfile = $_FILES['gambar']['size'];
-    $error = $_FILES['gambar']['error'];
-    $tmpName = $_FILES['gambar']['tmp_name'];
-
-    // Cek apakah tidak ada gambar yang diupload
+    // cek gambar 
     if ($error === 4) {
-        return "Pilih gambar terlebih dahulu";
+        echo "<script>
+                alert('upload image !');
+            </script>";
+        return false;
     }
 
-    // Cek apakah yang diupload adalah gambar
-    $ekstensigambarValid = ['jpg', 'jpeg', 'png'];
-    $ekstensigambar = explode('.', $namafile);
-    $ekstensigambar = strtolower(end($ekstensigambar));
-    if (!in_array($ekstensigambar, $ekstensigambarValid)) {
-        return "Yang Anda upload bukan gambar";
+    // cek yg diupload apakah gambar
+    $ekstensiGambarValid = ['jpg', 'jpeg', 'png'];
+    $ekstensiGambar = explode('.', $namaFile);
+    $ekstensiGambar = strtolower(end($ekstensiGambar));
+    if (!in_array($ekstensiGambar, $ekstensiGambarValid)) {
+        echo "<script>
+                alert('invalid format !');
+            </script>";
+        return false;
     }
 
-    // Cek jika ukurannya terlalu besar
-    if ($ukuranfile > 50000000) {
-        return "Ukuran gambar terlalu besar";
+
+    // cek ukuran
+    if ($ukuranFile > 8000000) {
+        echo "<script>
+                alert('image cannot exceed 8mb !');
+            </script>";
+        return false;
     }
 
-    // Lolos pengecekan, gambar siap diupload
-    // Generate nama gambar baru
-    $namafilebaru = uniqid();
-    $namafilebaru .= '.';
-    $namafilebaru .= $ekstensigambar;
 
-    move_uploaded_file($tmpName, 'img/' . $namafilebaru);
+    // lolos pengecekan
+    move_uploaded_file($tmpName, 'img/' . $namaFile);
 
-    return $namafilebaru;
+    return $namaFile;
 }
+
 function hapusNews($id_news)
 {
     $conn = koneksi();

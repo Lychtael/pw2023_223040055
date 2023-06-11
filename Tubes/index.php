@@ -47,8 +47,8 @@ require('functions.php');
           </div>
         </div>
       </div>
-      <nav class="bg-dark bg-gradient navbar-sm">
-        <div class="nav_list">
+      <div class="collapse" id="navbarToggleExternalContent" data-bs-theme="dark">
+        <div class="bg-dark bg-gradient navbar-sm">
           <ul>
             <li><a href="#home">HOME</a></li>
             <li><a href="#game">GAME</a></li>
@@ -60,6 +60,13 @@ require('functions.php');
             <li><a href="#about">ABOUT US</a></li>
           </ul>
         </div>
+      </div>
+      <nav class="navbar navbar-dark bg-dark bg-gradient">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
       </nav>
     </div>
   </section>
@@ -67,10 +74,10 @@ require('functions.php');
   <div class="main_content">
     <div class="container sm p-1">
       <div class="slider">
-        <img id="img1" src="./img/ARR.jpg" alt="A Realm Reborn" />
-        <img id="img2" src="./img/Stormblood.jpeg" alt="Stormblood" />
-        <img id="img3" src="./img/SHB.jpg" alt="Shadowbringer" />
-        <img id="img4" src="./img/Endwalker.jpg" alt="Endwalker" />
+        <img id="img1" src="./img/ARR.jpg" alt="A Realm Reborn" class="img-fluid" />
+        <img id="img2" src="./img/Stormblood.jpeg" alt="Stormblood" class="img-fluid" />
+        <img id="img3" src="./img/SHB.jpg" alt="Shadowbringer" class="img-fluid" />
+        <img id="img4" src="./img/Endwalker.jpg" alt="Endwalker" class="img-fluid" />
       </div>
       <div class="nav-btn">
         <span class="dot active" onclick="changeSlide(0)"></span>
@@ -108,7 +115,7 @@ require('functions.php');
             <h2 class="card-title text-danger">
               Patch 6.4─The Dark Throne Special Site Update
             </h2>
-            <img src="./img/173a2048d61c0d2fee9eb614f3c2baf034771837.png" alt="" />
+            <img src="./img/173a2048d61c0d2fee9eb614f3c2baf034771837.png" alt="" class="img-fluid" />
             <br />
             <p class="card-text">
               The Patch 6.4 special site has been updated with details on
@@ -123,13 +130,13 @@ require('functions.php');
           <div class="card-body">
             <h2 class="card-title text-danger">Live Letter From Producer</h2>
             <br />
-            <iframe width="720" height="480" src="https://www.youtube.com/embed/4i8PijfPKIs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe class="img-fluid" src="https://www.youtube.com/embed/4i8PijfPKIs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           </div>
           <div class="card-body">
             <h2 class="card-title text-danger">
               Moogle Treasure Trove Event
             </h2>
-            <img src="./img/6ecf93237102697dc70d42b9ab22b717da5193e2.png" alt="" />
+            <img src="./img/6ecf93237102697dc70d42b9ab22b717da5193e2.png" class="img-fluid" alt="" />
             <br />
             <p class="card-text">
               Collect Irregular Tomestones And Get Rare Items !
@@ -159,9 +166,6 @@ require('functions.php');
             </div>
             <div class="images">
               <img src="./img/2022-09-02_12-43-04-881_Fairy Blackthorns.png" alt="" />
-            </div>
-            <div class="images">
-              <img src="./img/ffxiv_dx11 2023-03-26 07-13-18.png" alt="" />
             </div>
             <div class="images">
               <img src="./img/ffxiv_dx11 2023-03-26 17-55-54.png" alt="" />

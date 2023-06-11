@@ -28,7 +28,7 @@
                             Users
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="Admin.User.View.php">Show Users</a></li>
+                            <li><a class="dropdown-item" href="AdminUser.php">Show Users</a></li>
                             <li><a class="dropdown-item" href="AddUser.php">Register New Users</a></li>
                         </ul>
                     </li>

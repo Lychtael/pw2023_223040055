@@ -1,5 +1,7 @@
 <?php
 session_start();
+require_once('functions.php');
+$news_items = query("SELECT * FROM news_items");
 
 if (!isset($_SESSION["login"])) {
   header("Location: Login.php");
@@ -27,16 +29,16 @@ if (!isset($_SESSION["login"])) {
         <div class="d-flex">
           <div class="p-2 flex-grow-1">
             <div class="logo">
-              <a href="Main.php">The Etherys</a>
+              <a href="index.php">The Etherys</a>
             </div>
           </div>
-          <div class="top-tombol p-2">
-            <div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="./img/profile-circle-svgrepo-com.svg" alt=""></button>
-              <ul class="dropdown-menu">
-                <li><button class="dropdown-item" type="button">Profile</button></li>
-                <li><button class="dropdown-item" type="button">Log out</button></li>
-              </ul>
+          <div class="top-tombol">
+            <div class="tombol-login bg-black bg-gradient p-1">
+              <div class="p-3 fs-5">
+                <span>
+                  <a href="Logout.php">LOG OUT</a>
+                </span>
+              </div>
             </div>
           </div>
         </div>
@@ -44,49 +46,66 @@ if (!isset($_SESSION["login"])) {
     </div>
   </div>
   <!-- main contents -->
-  <div class="container sm bg-dark text-white text-center p-3 mt-3">
-    <div class="bg-dark text-white">
-      <div class="card-body">
-        <h1 class="card-title text-danger">
-          Patch 6.4─The Dark Throne Special Site Update
-        </h1>
-        <br>
-        <img src="./img/173a2048d61c0d2fee9eb614f3c2baf034771837.png" alt="" />
-        <br />
-        <p class="card-text">
-          The Patch 6.4 special site has been updated with details on
-          upcoming content including the main scenario; the new raid
-          dungeon, Pandæmonium: Anabaseios; the new dungeon, the
-          Aetherfont; the Unreal trial, Containment Bay Z1T9; and new
-          additions to Duty Support. Be sure to visit regularly as we’ll
-          keep you updated on the latest information about the patch until
-          its release.
-        </p>
-        <hr>
+  <div class="search">
+    <div class="container sm bg-dark text-white text-center">
+      <div class="cari p-5">
+        <form action="" method="get">
+          <input type="text" name="keyword" class="keyword" placeholder="Search something.." data-role="input" autofocus>
+          <button type="submit" name="cari" class="button secondary outline tombol-cari"><i class="fas fa-search"></i></button>
+        </form>
       </div>
-      <div class="card-body">
-        <h1 class="card-title text-danger">Live Letter From Producer</h1>
-        <br />
-        <iframe width="720" height="480" src="https://www.youtube.com/embed/4i8PijfPKIs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        <hr>
-      </div>
-      <div class="card-body">
-        <h1 class="card-title text-danger">
-          Moogle Treasure Trove Event
-        </h1>
-        <br>
-        <img src="./img/6ecf93237102697dc70d42b9ab22b717da5193e2.png" alt="" />
-        <br />
-        <p class="card-text">
-          Collect Irregular Tomestones And Get Rare Items !
-        </p>
-      </div>
-      <div class="card-body">
-        <a href="News.php" class="btn btn-danger">Show More</a>
-      </div>
-      <hr />
+      <?php if ($news_items) : ?>
+        <?php foreach ($news_items as $news_item) : ?>
+          <div class="berita">
+            <div class="card-body py-5">
+              <h1 class="card-title text-danger">
+                <?= $news_item["title"]; ?>
+              </h1>
+              <br>
+              <img src="img/<?= $news_item["image"]; ?>" class="img-fluid p-5" style="height: 80%; width: 80%;">
+              <br>
+              <a class="btn btn-danger my-2" href="NewsDetail.php?id=<?= $news_item['id_news']; ?>">Click For Details</a>
+            </div>
+            <hr>
+          </div>
+        <?php endforeach ?>
+      <?php else : ?>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="alert alert-danger" role="alert">
+              Nothing found !
+            </div>
+          </div>
+        </div>
+      <?php endif ?>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        const tombolCari = $(".tombol-cari");
+        const keyword = $(".keyword");
+        const container = $(".berita");
+
+        tombolCari.hide();
+
+        // livesearch admin
+        keyword.keyup(function() {
+          var keywords = keyword.val().split(" ");
+          $.ajax({
+            url: "./ajax/user-search.php",
+            data: {
+              keywords: keywords,
+            },
+            type: "get",
+            success: function(response) {
+              container.html(response);
+            },
+          });
+        });
+      });
+    </script>
   </div>
+
 </body>
 
 </html>

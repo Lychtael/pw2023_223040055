@@ -5,14 +5,14 @@
 <div class="container mt-3">
     <div id="add-news" class="mt-4">
         <h2>ADD NEWS</h2>
-        <form method="POST" action="AddNews.php" enctype="multipart/formdata">
+        <form method="POST" action="AddNews.php" enctype="multipart/form-data">
             <div class="mb-3 w-50">
                 <label for="title" class="form-label">Title</label>
                 <input type="text" class="form-control" id="title" name="title" autofocus required>
             </div>
             <div class="mb-3 w-50">
                 <label for="image" class="form-label">Image</label>
-                <input type="file" id="image" name="image" required>
+                <input type="file" id="image" name="image">
             </div>
             <div class="mb-3 w-50">
                 <label for="description" class="form-label">Description</label>
